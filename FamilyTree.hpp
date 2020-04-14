@@ -1,4 +1,4 @@
-//#pragma once
+#pragma once
 #include <string>
 using namespace std;
 
@@ -71,7 +71,7 @@ namespace family{
         }
     };
 }
-void addInOrder(Node* root,string name,string toAdd,int gander,int height);
+void add(Node* root,string name,string toAdd,int gander,int height);
 
 void relationFind(Node * root, string name,int* height,int* gander);
 

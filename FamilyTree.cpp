@@ -3,12 +3,12 @@
 using namespace family;
 
 Tree& Tree::addFather(string name, string father){
-    addInOrder(this->root,name,father,0,1);
+    add(this->root,name,father,0,1);
     return *this;
 }
 
 Tree& Tree::addMother(string name, string mother){
-    addInOrder(this->root,name,mother,1,1);
+    add(this->root,name,mother,1,1);
     return *this;
 }
 string Tree::relation(string name){
@@ -51,7 +51,7 @@ void Tree::display(){
 
 }
 
-void addInOrder(Node* root ,string name, string toAdd,int gander,int height){
+void add(Node* root ,string name, string toAdd,int gander,int height){
     if(root==NULL) return;
     if(gander==0 && root->getName()==name && root->getFather()==NULL){
         root->setNode(toAdd,gander,height);
@@ -62,8 +62,8 @@ void addInOrder(Node* root ,string name, string toAdd,int gander,int height){
         return;
     }
     if(root!=NULL){
-        addInOrder(root->getMother(), name, toAdd, gander,height+1);
-        addInOrder(root->getFather(), name, toAdd, gander,height+1);
+        add(root->getMother(), name, toAdd, gander,height+1);
+        add(root->getFather(), name, toAdd, gander,height+1);
     }
 }
 
