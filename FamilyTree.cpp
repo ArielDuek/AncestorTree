@@ -81,16 +81,18 @@ void relationFind(Node * root, string name,int* height,int* gander){
 void findRec(Node * root, string name,string &ans) {
     if (name == "grandmother" && root->getMother()->getMother() != NULL) {
         ans = root->getMother()->getMother()->getName();
+        return;
     } else if (name == "grandmother" && root->getFather()->getMother() != NULL) {
         ans = root->getFather()->getMother()->getName();
+        return;
     } else if (name == "grandfather" && root->getFather()->getFather() != NULL) {
         ans = root->getFather()->getFather()->getName();
+        return;
     } else if (name == "grandfather" && root->getMother()->getFather() != NULL) {
         ans = root->getMother()->getFather()->getName();
+        return;
     }
-    else if (name.size() > 6) {
-        findRec(root->getFather(), name.substr(6), ans);
-        findRec(root->getMother(), name.substr(6), ans);
-    }
-    return;
+    if((name!="grandmother" && name!="grandfather") && (name.length()<6 || name.substr(0,6)!="great-")) throw runtime_error("Didnt found in tree");
+    if((name!="grandmother" && name!="grandfather"))findRec(root->getFather(), name.substr(6), ans);
+    if((name!="grandmother" && name!="grandfather")&& ans=="")findRec(root->getMother(), name.substr(6), ans);
 }
