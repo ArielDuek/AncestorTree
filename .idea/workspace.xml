@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08b1f713-cc61-4087-9446-052bccf232c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyTree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,7 @@
       <workItem from="1585857876280" duration="2440000" />
       <workItem from="1586785531680" duration="9486000" />
       <workItem from="1586875218514" duration="4644000" />
+      <workItem from="1587329561540" duration="237000" />
     </task>
     <servers />
   </component>
@@ -74,5 +74,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1586971004993" />
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1587329564098">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1587329564098" />
   </component>
 </project>
