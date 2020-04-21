@@ -71,8 +71,10 @@ namespace family{
         }
     };
 }
-void add(Node* root,string name,string toAdd,int gander,int height);
+bool add(Node* root,string name,string toAdd,int gander,int height);
 
-void relationFind(Node * root, string name,int* height,int* gander);
+void relationRec(Node * root, string name,int* height,int* gander);
 
 void findRec(Node * root, string name,string& ans);
+
+void deleteFromTree (Node * root, string name);
