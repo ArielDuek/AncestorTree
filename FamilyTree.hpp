@@ -32,6 +32,18 @@ public:
     int getHeight(){
         return this->height;
     }
+    ~ Node(){
+        setFatherNull();
+        setMotherNull();
+    }
+
+    void setFatherNull(){
+        this->father=NULL;
+    }
+
+    void setMotherNull(){
+        this->mother=NULL;
+    }
     void setNode (string toAdd,int gander,int height){
         if(gander == 0) {
             Node *ans = new Node(toAdd,gander,height);
@@ -77,4 +89,6 @@ void relationRec(Node * root, string name,int* height,int* gander);
 
 void findRec(Node * root, string name,string& ans);
 
-void deleteFromTree (Node * root, string name);
+void findToDelete (Node * root, string name, Node ** child);
+
+void deleteSubTree(Node* root);

@@ -57,7 +57,7 @@ TEST_CASE("Test 1 find") {
     //CHECK_THROWS(T.find("sister"));
     CHECK_THROWS(T.find("great-grandfather")); //there is no great-grandfather here
     CHECK_THROWS(T.find("great-grandmother"));
-    
+
     T.addMother("Yosef", "Efrat").addFather("Yosef", "Shmuel").addFather("Shmuel", "Israel");
 
     CHECK(T.find("great-grandmother") == string("Efrat"));
@@ -65,12 +65,12 @@ TEST_CASE("Test 1 find") {
     CHECK(T.find("great-great-grandfather") == string("Israel"));
     CHECK_THROWS(T.find("great-great-grandmother"));
 
-    T.addFather("Yonatan", "Ofer").addMother("Yonatan", "Sima").addMother("Simha", "Ester"); 
+    T.addFather("Yonatan", "Ofer").addMother("Yonatan", "Sima").addMother("Simha", "Ester");
 
-    CHECK((T.find("great-grandfather") == string("Shmuel") || T.find("great-grandfather") == string("Ofer"))); 
-    CHECK((T.find("great-grandmother") == string("Efrat") 
+    CHECK((T.find("great-grandfather") == string("Shmuel") || T.find("great-grandfather") == string("Ofer")));
+    CHECK((T.find("great-grandmother") == string("Efrat")
         || T.find("great-grandmother") == string("Sima")
-        || T.find("great-grandmother") == string("Ester"))); 
+        || T.find("great-grandmother") == string("Ester")));
     CHECK_THROWS(T.find("great-great-great-grandfather"));
     CHECK_THROWS(T.find("great-great-great-great-grandfather"));
 }
@@ -88,12 +88,12 @@ TEST_CASE("Test 1 remove") {
     CHECK((T.find("grandfather") == string("David") || T.find("grandfather") == string("Yoni")));
 
     CHECK(T.find("father") == string("Rami"));
-    T.remove("Rami"); 
+    T.remove("Rami");
     CHECK_THROWS(T.find("father")); // removed the father
     CHECK(T.find("grandfather") == string("Yoni")); //because David has removed from the tree while removing Rami
 
-    CHECK(T.find("great-grandmother") == string("Vered")); 
-    CHECK(T.find("great-grandfather") == string("Shlomi")); 
+    CHECK(T.find("great-grandmother") == string("Vered"));
+    CHECK(T.find("great-grandfather") == string("Shlomi"));
     T.remove("Vered");
     CHECK_THROWS(T.find("great-grandmother"));
     T.remove("Yoni");
@@ -101,12 +101,12 @@ TEST_CASE("Test 1 remove") {
     CHECK_THROWS(T.find(T.find("grandfather")));
 
     T.addFather("Anat", "Nir"); //we've removed Yoni, sowe can add new father to Anat now
-    CHECK(T.find("grandfather") == string("Nir")); 
+    CHECK(T.find("grandfather") == string("Nir"));
     CHECK(T.find("grandmother") == string("Rivka"));
-    T.remove("Rivka"); 
-    CHECK_THROWS(T.find("grandmother")); 
-    T.remove("Anat"); 
-    CHECK_THROWS(T.find("grandfather")); 
+    T.remove("Rivka");
+    CHECK_THROWS(T.find("grandmother"));
+    T.remove("Anat");
+    CHECK_THROWS(T.find("grandfather"));
     CHECK_THROWS(T.find("mother"));
 }
 
@@ -174,8 +174,8 @@ TEST_CASE("Test 2 find"){
     CHECK(T.find("great-grandfather") == string("Hanoh"));
     CHECK(T.find("great-grandmother") == string("ShemTov"));
     CHECK(T.find("great-great-grandfather") == string("Alex"));
-    
-    CHECK_THROWS(T.find("great-great-great-grandmother")); //there is no great-great-great-grandmother 
+
+    CHECK_THROWS(T.find("great-great-great-grandmother")); //there is no great-great-great-grandmother
 }
 
 TEST_CASE("Test 2 remove"){

@@ -13,7 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_hila.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test_hila.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
       <workItem from="1586875218514" duration="4644000" />
       <workItem from="1587329561540" duration="3725000" />
       <workItem from="1587478903251" duration="1054000" />
-      <workItem from="1587480702591" duration="8796000" />
+      <workItem from="1587480702591" duration="16770000" />
     </task>
     <servers />
   </component>
